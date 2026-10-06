@@ -1,0 +1,19 @@
+SecureAccess - Testes Unitários Caixa Branca (Java 17 + Maven + JUnit 5)
+
+COMO ABRIR NO INTELLIJ IDEA
+1. File > Open... e selecione a pasta "secureaccess-testes" (onde está o pom.xml).
+2. Aguarde o Maven importar as dependências (precisa de internet na 1ª vez).
+3. Confirme o JDK 17 ou superior: File > Project Structure > Project SDK.
+
+COMO EXECUTAR
+- IntelliJ: botão direito em src/test/java > "Run 'All Tests'"
+  (ou abra uma classe de teste e clique na seta verde ao lado da classe).
+- Terminal:  mvn clean test
+
+COBERTURA (JaCoCo)
+- Após "mvn clean test", abra target/site/jacoco/index.html no navegador.
+- No IntelliJ também: botão direito > "Run with Coverage".
+
+ESTRUTURA
+- src/main/java/com/secureaccess : ValidacaoSenhaService, AutenticacaoService, Usuario, exceções
+- src/test/java/com/secureaccess : ValidacaoSenhaServiceTest (CT01-CT18), AutenticacaoServiceTest (AUT01-AUT12, RF06, RF07, RF08)
